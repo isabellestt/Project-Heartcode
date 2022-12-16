@@ -17,6 +17,14 @@
         .box {
             border: 1px solid black;
         }
+        .card-body {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .col-md-4, .col-lg-4 {
+            border: 3px solid black;
+        }
         
     </style>
 </head>
@@ -40,34 +48,42 @@
             </div>
         </div>
     </nav>
-
-    <!-- helplines -->
+    <!-- cards -->
+    <br><br>
+    <p class="display-5 fw-bold text-center">Who you can call</p>
+    <br><br>
     <div class="container">
-        <div class="row mt-3">
-            <div class="col-md-4 box" id="imh">
-                <img src="imh.png" alt="..." style="height:80%; width:80%">
-                <h5>+65 6389-2222</h5>
-                <p>24 hour hotline</p>
-                <a href="https://www.imh.com.sg/Pages/default.aspx" class="btn btn-primary">Website</a>
-            </div>   
+        <div class="row" id="cards">
+          <div class="col-md-4 col-lg-4">
+            <img class="card-img-top" src="imh.png" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">+65 6389-2222</h5>
+              <p class="card-text">24h hotline</p>
+              <a href="https://www.imh.com.sg/Pages/default.aspx" class="btn btn-outline-primary">Website</a>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <img class="card-img-top" src="silverribbon.png" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">+65 6389-2222</h5>
+              <p class="card-text">24h hotline</p>
+              <a href="https://www.silverribbonsingapore.com/" class="btn btn-outline-primary">Website</a>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <img class="card-img-top" src="sos.png" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">+65 6389-2222</h5>
+              <p class="card-text">24h hotline</p>
+              <a href="https://www.sos.org.sg/" class="btn btn-outline-primary">Website</a>
+                
+            </div>
+          </div>
         </div>
-        <div class="row mt-3">
-            <div class="col-md-4 box" id="silverribbon">
-                <img src="silverribbon.png" alt="...">
-                <h5>+65 6389-2222</h5>
-                <p>24 hour hotline</p>
-                <a href="https://www.silverribbonsingapore.com/" class="btn btn-primary">Website</a>
-            </div>   
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-4 box" id="sos">
-                <img src="sos.png" alt="...">
-                <h5>+65 6389-2222</h5>
-                <p>24 hour hotline</p>
-                <a href="https://www.sos.org.sg/" class="btn btn-primary">Website</a>
-            </div>   
-        </div>
-    </div>    
+      </div>
+    </div>
+
+
 
     <script>
         function changeTheme() {
