@@ -22,6 +22,14 @@
         #binge_eating {
             background-color: chartreuse;
         }
+
+        #jumbotron{height: 900px;
+                   background:url(images/bg.jpg);
+                   display:flex;
+                   align-items: center;
+                   margin-bottom: 1em;
+                   background-size: cover;
+        }
     </style>
 
 
@@ -47,33 +55,6 @@
     </nav>
     <!-- Javacript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>  
-
-
-    <div class="container">
-        <div class="row mt-2">
-            <!-- anorexia -->
-            <div class="col-md-6 box" id="anorexia">
-                <h1 class="text-center fw-bold lh-1">Anorexia Nervosa</h1>
-                <p class="fw-bold lh-1">What are the signs of someone being down with Anorexia Nervosa?</p>
-                <p class="lh-1">- Involves partial or total abstinence from food (solids or liquids) because one believes any amount of food will cost weight gain</p>
-                <p class="lh-1">- Often perceives oneself as fat and has an intense fear of gaining weight</p>
-                <p class="lh-1">- Reflected via an unhealthy preoccupation with food and excercise</p>
-                <p class="lh-1">- Engages in purging activities such as self induced vomiting and using laxatives</p>
-            <!-- binge eating -->
-            </div>
-            <div class="col-md-6 box" id="binge_eating">
-                <h1 class="text-center fw-bold lh-1">Binge Eating Disorder</h1>
-                <p class="fw-bold lh-1">What are the signs of someone being down with binge eating disorder?</p>
-                <p class="lh-1">- Involves excessively bingeing on food</p>
-                <p class="lh-1">- Includes periods of uncontrolled, impulsive and continous eating till being uncomfortably full</p>
-                <p class="lh-1">- No compensatory behaviour thereafter (no purging)</p>
-                <p class="lh-1">- Usually triggered by emotional events and leads victim to turn to food as a means of comfort</p>
-                <p class="lh-1">- The aftermath involves guilt and self loathing</p>
-            </div>
-        </div>
-    </div>     
-    </div>
-</div>     
     
 
     <!-- toggle theme -->
@@ -102,4 +83,12 @@
                 document.getElementById("navbar").classList.remove("bg-secondary")
                 document.getElementById("darktheme").innerText = "";
             }
+        
+        // Jumbotron
+        <div class="jumbotron jumbotron-fluid" id="jumbotron">
+            <div class="container">
+                <h1 class="text-danger display-3 fw-bolder text-start" >Welcome to my first webpage</h1>
+                <p class="text-info fw-bold text-start">This webpage is created using HTML, CSS & Bootstrap</p>
+            </div>
+        </div>
         }
