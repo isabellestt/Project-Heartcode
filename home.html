@@ -22,6 +22,14 @@
         #binge_eating {
                 background-color: chartreuse;
         }
+
+        #jumbotron{height: 900px;
+                   background:url(images/bg.jpg);
+                   display:flex;
+                   align-items: center;
+                   margin-bottom: 1em;
+                   background-size: cover;
+        }
     </style>
 
 
@@ -76,4 +84,12 @@
                 document.getElementById("navbar").classList.remove("bg-secondary")
                 document.getElementById("darktheme").innerText = "";
             }
+        
+        // Jumbotron
+        <div class="jumbotron jumbotron-fluid" id="jumbotron">
+            <div class="container">
+                <h1 class="text-danger display-3 fw-bolder text-start" >Welcome to my first webpage</h1>
+                <p class="text-info fw-bold text-start">This webpage is created using HTML, CSS & Bootstrap</p>
+            </div>
+        </div>
         }
