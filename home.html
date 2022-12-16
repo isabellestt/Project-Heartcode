@@ -22,9 +22,9 @@
 
 
 </head>
-<body>
+<body class ="light">
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-light" id = "navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Mental Health
                 <img src="transparent heart.png">
@@ -62,20 +62,28 @@
         </div>
     </div>
     <div class="text-center mt-3" id="darktheme"></div>
-
+    
     <script>
         function changeTheme() {
-            var checkbox = document.getElementById("checkbox");
+            var checkbox = document.getElementById("themechanger");
             if (checkbox.checked) {
                 document.body.classList.add("dark");
                 document.body.classList.remove("light");
-                document.getElementById("theme-indicator").innerText = "Current Theme: Dark";
+                document.getElementById("navbar").classList.add("navbar-dark")
+                document.getElementById("navbar").classList.add("bg-secondary")
+                document.getElementById("navbar").classList.remove("bg-info")
+                document.getElementById("darktheme").innerText = "Welcome to the dark side";
+
             } else {
                 document.body.classList.add("light");
                 document.body.classList.remove("dark");
-                document.getElementById("theme-indicator").innerText = "Current Theme: Light";
+                document.getElementById("navbar").classList.add("bg-info")
+                document.getElementById("navbar").classList.remove("navbar-dark")
+                document.getElementById("navbar").classList.remove("bg-secondary")
+                document.getElementById("darktheme").innerText = "";
             }
         }
+    </script>
 
     
         
