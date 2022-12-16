@@ -69,12 +69,18 @@
     <!-- Jumbotron -->
     <div class="jumbotron jumbotron-fluid" id = "jumbotron">
         <div class="container">
-        <h1 class="display-5 fw-bolder text-white text-center align-text-top" style="font-family: 'Times New Roman', Times, serif;">Eating Disorders</h1>
-        <p class="text-white text-center" style="font-family: 'Times New Roman', Times, serif;">Eating disorders are among the deadliest mental illnesses, second only to opioid overdose.</p>
+        <h1 class="display-5 fw-bolder text-black text-center align-text-top">Causes & Prevention</h1>
+        <p class="text-dark text-center">Understanding Its Causes & How To Be Prevented</p>
         </div>
     </div>
 
     <!-- toggle theme -->
+    <div class="form-check form-switch mt-3">
+        <div class="row d-flex flex-row justify-content-center">
+            <input class="form-check-input col-6" type="checkbox" id="themechanger" onchange="changeTheme()">
+        </div>
+    </div>
+    <div class="text-center mt-3" id="darktheme"></div>
 
     <script>
         function changeTheme() {
@@ -90,11 +96,43 @@
             } else {
                 document.body.classList.add("light");
                 document.body.classList.remove("dark");
-                document.getElementById("navbar").classList.add("bg-light")
-                document.getElementById("navbar").classList.add("navbar-light")
-                document.getElementById("navbar").classList.remove("bg-dark")
+                document.getElementById("navbar").classList.add("bg-info")
                 document.getElementById("navbar").classList.remove("navbar-dark")
+                document.getElementById("navbar").classList.remove("bg-secondary")
                 document.getElementById("darktheme").innerText = "";
             }
         }
     </script>
+    <!-- carousel -->
+    <div id="section4" class="container-fluid">
+        <h2><b>Statistics</b></h2>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="statistic1.png" class="d-block w-100 img-car" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="statistic2.png" class="d-block w-100 img-car" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="statistic3.png" class="d-block w-100 img-car" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+</body>
+</html>
