@@ -69,39 +69,45 @@
     <!-- Jumbotron -->
     <div class="jumbotron jumbotron-fluid" id = "jumbotron">
         <div class="container">
-        <h1 class="display-5 fw-bolder text-black text-center align-text-top">Causes & Prevention</h1>
+        <h1 class="display-5 fw-bolder text-black text-center align-text-top">Eating Disorders</h1>
         <p class="text-dark text-center">Understanding Its Causes & How To Be Prevented</p>
         </div>
     </div>
 
-    <!-- toggle theme -->
+    <!-- toggle theme
     <div class="form-check form-switch mt-3">
         <div class="row d-flex flex-row justify-content-center">
             <input class="form-check-input col-6" type="checkbox" id="themechanger" onchange="changeTheme()">
         </div>
     </div>
-    <div class="text-center mt-3" id="darktheme"></div>
+    <div class="text-center mt-3" id="darktheme"></div> -->
 
     <script>
         function changeTheme() {
             var checkbox = document.getElementById("themechanger");
             if (checkbox.checked) {
                 document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'white'
                 document.body.classList.add("dark");
                 document.body.classList.remove("light");
                 document.getElementById("navbar").classList.add("navbar-dark");
                 document.getElementById("navbar").classList.add("bg-dark");
                 document.getElementById("navbar").classList.remove("bg-info");
-
+                document.cookie = "isDark=true"
+    
             } else {
+                document.body.style.backgroundColor = 'white';
                 document.body.classList.add("light");
                 document.body.classList.remove("dark");
-                document.getElementById("navbar").classList.add("bg-info")
+                document.getElementById("navbar").classList.add("bg-light");
+                document.getElementById("navbar").classList.add("navbar-light")
+                document.getElementById("navbar").classList.remove("bg-dark")
                 document.getElementById("navbar").classList.remove("navbar-dark")
-                document.getElementById("navbar").classList.remove("bg-secondary")
                 document.getElementById("darktheme").innerText = "";
+                document.body.style.color = 'black';
+                document.cookie = "isDark=false"
             }
-        }
+    }
     </script>
     <!-- carousel -->
     <div id="section4" class="container-fluid">

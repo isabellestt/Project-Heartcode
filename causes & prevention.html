@@ -174,6 +174,16 @@
 <!-- toggle theme -->
 
 <script>
+    if(document.cookie == 'isDark=true') {
+        document.body.style.color = 'white'
+        document.body.style.backgroundColor = 'black';
+        document.body.classList.add("dark");
+        document.body.classList.remove("light");
+        document.getElementById("navbar").classList.add("navbar-dark");
+        document.getElementById("navbar").classList.add("bg-dark");
+        document.getElementById("navbar").classList.remove("bg-info");
+        document.cookie = "isDark=true";
+    }
     function changeTheme() {
         var checkbox = document.getElementById("themechanger");
         if (checkbox.checked) {
@@ -184,6 +194,7 @@
             document.getElementById("navbar").classList.add("navbar-dark");
             document.getElementById("navbar").classList.add("bg-dark");
             document.getElementById("navbar").classList.remove("bg-info");
+            document.cookie = "isDark=true"
 
         } else {
             document.body.style.backgroundColor = 'white';
@@ -195,6 +206,7 @@
             document.getElementById("navbar").classList.remove("navbar-dark")
             document.getElementById("darktheme").innerText = "";
             document.body.style.color = 'black';
+            document.cookie = "isDark=false"
         }
     }
 </script>
