@@ -52,6 +52,12 @@
                     <a class="nav-link active" href="facts.html" href="">Facts Of Eating Disorders</a>
                     <a class="nav-link" href="causes & prevention.html">Causes & Prevention</a>
                     <a class="nav-link" href="helplines.html">Helplines</a>
+                    <div class="form-check form-switch mt-3">
+                        <div class="row d-flex flex-row justify-content-center">
+                            <input class="form-check-input col-6" type="checkbox" id="themechanger" onchange="changeTheme()">
+                        </div>
+                    </div>
+                    <div class="text-center mt-3" id="darktheme"></div>
                 </div>
             </div>
         </div>
@@ -62,18 +68,12 @@
     <!-- Jumbotron -->
     <div class="jumbotron jumbotron-fluid" id = "jumbotron">
         <div class="container">
-        <h1 class="display-5 fw-bolder text-white text-center align-text-top">Eating Disorders</h1>
-        <p class="text-white text-center">Eating disorders are among the deadliest mental illnesses, second only to opioid overdose.</p>
+        <h1 class="display-5 fw-bolder text-white text-center align-text-top" style="font-family: 'Times New Roman', Times, serif;">Eating Disorders</h1>
+        <p class="text-white text-center" style="font-family: 'Times New Roman', Times, serif;">Eating disorders are among the deadliest mental illnesses, second only to opioid overdose.</p>
         </div>
     </div>
 
     <!-- toggle theme -->
-    <div class="form-check form-switch mt-3">
-        <div class="row d-flex flex-row justify-content-center">
-            <input class="form-check-input col-6" type="checkbox" id="themechanger" onchange="changeTheme()">
-        </div>
-    </div>
-    <div class="text-center mt-3" id="darktheme"></div>
 
     <script>
         function changeTheme() {
@@ -82,15 +82,17 @@
                 document.body.classList.add("dark");
                 document.body.classList.remove("light");
                 document.getElementById("navbar").classList.add("navbar-dark")
-                document.getElementById("navbar").classList.add("bg-secondary")
+                document.getElementById("navbar").classList.add("bg-dark")
                 document.getElementById("navbar").classList.remove("bg-info")
 
             } else {
                 document.body.classList.add("light");
                 document.body.classList.remove("dark");
-                document.getElementById("navbar").classList.add("bg-info")
+                document.getElementById("navbar").classList.add("bg-light")
+                document.getElementById("navbar").classList.add("navbar-light")
+                document.getElementById("navbar").classList.remove("bg-dark")
                 document.getElementById("navbar").classList.remove("navbar-dark")
-                document.getElementById("navbar").classList.remove("bg-secondary")
                 document.getElementById("darktheme").innerText = "";
             }
         }
+    </script>
